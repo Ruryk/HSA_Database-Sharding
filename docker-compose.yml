@@ -61,7 +61,8 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - pgadmin-data:/var/lib/pgadmin
+#      - pgadmin-data:/var/lib/pgadmin
+      - ./pgadmin-data:/var/lib/pgadmin
     networks:
       - shard-network
 
@@ -69,7 +70,7 @@ volumes:
   postgresql-b-data:
   postgresql-b1-data:
   postgresql-b2-data:
-  pgadmin-data:
+#  pgadmin-data:
 
 networks:
   shard-network:
